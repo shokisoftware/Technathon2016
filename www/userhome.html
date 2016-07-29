@@ -41,26 +41,64 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
 
+
+
     <title>User Home</title>
 </head>
 
 <body>
-<div class="app">
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+     <div data-role="header">           
+            <a href="#nav-panel" class="Menu"></a>           
+        </div><!-- /header -->
 
-    <div style="margin-top:-15%;">
-        <a href="#" class="ui-btn ui-btn-inline ui-input-btn ui-btn ui-corner-all" style="margin-left:-2%;"  >Buy Food</a>
-        <a href="#" class="ui-btn ui-btn-inline ui-input-btn ui-btn ui-corner-all" style="margin-left:-2%;" >Sell food</a>
+   <div role="main" class="ui-content jqm-content jqm-fullwidth ">
+
+        <div >
+            <div style="margin-left:25% !important;">
+            <img src="img/lunchboxlogo.png" />
+            <h3>Select your option now</h3>
+            </div>
+            <a href="buyfood.html" data-ajax="false" class="ui-btn ui-btn-inline ui-input-btn ui-btn ui-corner-all">Buy Food</a>
+            <a href="sellfood.html"  data-ajax="false" class="ui-btn ui-btn-inline ui-input-btn ui-btn ui-corner-all">Sell food</a>
+        </div>
+
+    </div>
+      <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <img src="img/lunchboxlogo.png" />
+
+            <ul data-role="listview">
+            <li><a href="#">Hello, <span id="userName"></span></a></li>
+            <li><a href="#">My Past Orders</a></li>
+            <li><a href="#">My Reviews</a></li>
+            <li><a href="#">My Profile</a></li><li><a href="#">Rate Us</a></li><li><a href="#">Log Out</a></li>
+         </ul>
     </div>
 
 </div>
 
+
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
 <script>
     $(document).ready(function(){
-
+        function getUrlVars()
+        {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+         $("#userName").text(getUrlVars()["n"]);
         /*$.ajax({
             url:"https://anitubai123.cloudant.com/haveit/_all_docs?apikey=140e1f4c52a916441b63bcad56452e71ccb4e0c2",
             type:"GET",

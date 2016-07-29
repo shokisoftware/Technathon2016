@@ -77,16 +77,14 @@
 
         if(UserId.length>5 && Password.length>6) {
         var login=0;
-            $.each(UserDetails,function(key,value){
-
-            if((UserId==key) && (Password==value)){
+for(var i=0;i<UserDetails.length;i++){
+            if((UserDetails[i].emailid==UserId) && (UserDetails[i].password==Password)){
                 login=1;
-
                 alert("Login Succesful");
-                window.location.href = "userhome.html";
-
+                window.location.href = "userhome.html?n="+UserDetails[i].name;
             }
-        });
+}
+
             if(login==0){
 
                 alert("Invalid Credentials");

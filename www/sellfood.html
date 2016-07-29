@@ -47,10 +47,7 @@
 <body>
 <div class="app">
 
-    <div style="margin-top:-15%;">
-        <input  data-clear-btn="true" type="email" name="txtEmailId" id="txtEmailId"  placeholder="EmailId" style="margin-bottom:2%;"/>
-        <button class="ui-btn ui-btn-inline ui-input-btn ui-btn ui-corner-all" style="margin-left:-2%;" id="btnRetrievePassword">Retrieve</button>
-    </div>
+
 
 </div>
 
@@ -58,27 +55,11 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript">
     $(document).ready(function(){
-        $("#btnRetrievePassword").click(function(){
-            if($("#txtEmailId").val().length>5){
-             alert("An email has been sent to you with a password reset link.");
-                window.location.href="index.html";
-            }else{
-                alert("Enter a valid email id");
-            }
-        });
-        /*$.ajax({
-         url:"https://anitubai123.cloudant.com/haveit/_all_docs?apikey=140e1f4c52a916441b63bcad56452e71ccb4e0c2",
-         type:"GET",
-         success:function(){
-         alert("Success");
-         },
-         error:function(){
-         alert("Error Occured");
-         }
 
-         })*/
+
     })
 
 </script>
