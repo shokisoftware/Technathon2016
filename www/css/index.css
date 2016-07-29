@@ -24,20 +24,20 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#E4E4E4 !important;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
-    );
+    ) !important;
     background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif !important;
+    font-size:12px !important;
     height:100%;
     margin:0px;
     padding:0px;
@@ -47,6 +47,73 @@ body {
 a{
 
     font-size: 0.6em;
+}
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+table.altrowstable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.altrowstable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+.oddrowcolor{
+    background-color:#d4e3e5;
+}
+.evenrowcolor{
+    background-color:#c3dde0;
+}
+
+li a.ui-btn{
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif !important;
+    font-size:12px !important;
+
+    text-transform:uppercase;
+    width:100%;
+    width:auto;
+
+}
+.ui-responsive-panel{
+
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4 !important;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%) !important;
+    background-image:-webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #A7A7A7),
+            color-stop(0.51, #E4E4E4)
+    ) !important;
+    background-attachment:fixed;
+}
+div.ui-header.ui-bar-inherit{
+background-color: #f9f9f9;
+    border-color:#f9f9f9;
+}
+span.ui-icon-loading{
+    display:none !important;
+}
+a.Menu{
+    display:block !important;
+    height:85% !important;
+    width:1% !important;
+    background:url(../img/menu.png) no-repeat center top; /* 170px x 200px */
 }
 /* Portrait layout (default) */
 .app {
@@ -64,6 +131,10 @@ a{
 a.ui-btn {
     width:50%;
     margin-left:25%;
+}
+.ui-panel-wrapper{
+
+
 }
 .ui-btn{
 background-color:mediumslateblue;
